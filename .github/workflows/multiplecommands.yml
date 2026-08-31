@@ -1,4 +1,4 @@
-Name: install php on ubuntu 22 and ubuntu 24
+name: install php on ubuntu 22 and ubuntu 24
 on: workflow_dispatch
 jobs:
   job1:
