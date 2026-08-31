@@ -1,1 +1,30 @@
+Name: install php on ubuntu 22 and ubuntu 24
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: update apt repository
+        run: sudo apt update
+      - name: install php
+        run: sudo apt install php -y
+      - name: check php version
+        run: php --version
 
+
+  job2:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: install php on the runner vm
+        run: |
+          sudo apt update
+          sudo apt install php -y
+          php --version
+
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
