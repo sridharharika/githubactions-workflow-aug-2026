@@ -1,1 +1,12 @@
-
+name: install php - my first workflow
+on: workflow_dispatch
+jobs:
+    job-install-php:
+        runs-on: ubuntu-latest
+        steps:
+            - name: update apt repository
+              run: sudo apt update
+            - name: install php
+              run: sudo apt install php -y
+            - name: check php version
+              run: php --version
